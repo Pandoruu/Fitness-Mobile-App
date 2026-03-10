@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="exercises">Exercises</string>
+    <string name="plans">Plans</string>
+    <string name="log">Log</string>
+    <string name="more">More</string>
+</resources>
