@@ -1,0 +1,33 @@
+<resources>
+
+    <style name="Widget.App.SegmentedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <!-- không in hoa -->
+        <item name="android:textAllCaps">false</item>
+
+        <!-- bo góc pill -->
+        <item name="cornerRadius">20dp</item>
+
+        <!-- màu nền & chữ theo trạng thái checked -->
+        <item name="backgroundTint">@color/segmented_bg_color</item>
+        <item name="android:textColor">@color/segmented_text_color</item>
+
+        <!-- bỏ viền (outlined) -->
+        <item name="strokeWidth">0dp</item>
+
+        <!-- chữ đậm, size giống hình -->
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+
+        <!-- khoảng cách giữa 2 nút -->
+        <item name="android:layout_marginEnd">10dp</item>
+
+        <!-- ripple -->
+        <item name="rippleColor">#1A000000</item>
+
+        <!-- padding hợp lý -->
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+</resources>

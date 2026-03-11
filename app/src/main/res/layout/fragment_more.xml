@@ -8,7 +8,7 @@
         android:id="@+id/header_title"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:text="@string/exercises"
+        android:text="@string/more"
         android:textStyle="bold"
         android:textSize="30sp"
         android:textColor="@color/white"

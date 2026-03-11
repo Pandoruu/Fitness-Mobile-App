@@ -18,25 +18,83 @@
         android:paddingHorizontal="16dp"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <TextView
-        android:id="@+id/btn_add"
-        android:text="Add a new Plan!"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:textStyle="italic"
-        android:textSize="20sp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:backgroundTint="@color/orange"
-        android:background="@drawable/radius_16dp"
-        android:layout_margin="24dp"
-        app:layout_constraintTop_toBottomOf="@id/header_title"/>
+<!--    <LinearLayout-->
+<!--        android:id="@+id/layout_add"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="24dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/header_title">-->
+<!--        <TextView-->
+<!--            android:text="@string/add_a_new_plan"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textStyle="italic"-->
+<!--            android:textSize="20sp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:backgroundTint="@color/orange"-->
+<!--            android:background="@drawable/radius_left"-->
+<!--            android:layout_weight="2"/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/btn_add"-->
+<!--            android:text="+"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="20sp"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:backgroundTint="@color/orange"-->
+<!--            android:background="@drawable/radius_right"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_marginStart="5dp"/>-->
+<!--    </LinearLayout>-->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardSegment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="10dp"
+        app:contentPadding="10dp"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/header_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"
+            app:selectionRequired="true"
+            app:checkedButton="@id/btnWorkouts">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnWorkouts"
+                    style="@style/Widget.App.SegmentedButton"
+                    android:layout_width="160dp"
+                    android:layout_height="48dp"
+                    android:text="Workouts" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCustom"
+                    style="@style/Widget.App.SegmentedButton"
+                    android:layout_width="160dp"
+                    android:layout_height="48dp"
+                    android:text="Custom" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    </com.google.android.material.card.MaterialCardView>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@id/btn_add"/>
+        app:layout_constraintTop_toBottomOf="@id/cardSegment"/>
 
 
 
