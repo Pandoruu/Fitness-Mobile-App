@@ -5,4 +5,6 @@
     <string name="log">Log</string>
     <string name="more">More</string>
     <string name="add_a_new_plan">Add a new Plan</string>
+    <string name="kcal_counter">Kcal Counter</string>
+    <string name="kcal">Kcal</string>
 </resources>

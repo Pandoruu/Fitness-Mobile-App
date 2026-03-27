@@ -2,19 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/exercisesNav"
         android:title="@string/exercises"
         android:icon="@drawable/ic_weight"
         android:enabled="true"/>
 
     <item
+        android:id="@+id/planNav"
         android:title="@string/plans"
         android:icon="@drawable/ic_plan"
         android:enabled="true"/>
     <item
-        android:title="@string/log"
+        android:id="@+id/kcalNav"
+        android:title="@string/kcal"
         android:icon="@drawable/ic_log"
         android:enabled="true"/>
     <item
+        android:id="@+id/moreNav"
         android:title="@string/more"
         android:icon="@drawable/ic_setting"
         android:enabled="true"/>
