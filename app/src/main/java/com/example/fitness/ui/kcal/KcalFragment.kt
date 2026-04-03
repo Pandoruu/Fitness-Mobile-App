@@ -16,7 +16,6 @@ import kotlinx.coroutines.launch
 class KcalFragment : Fragment() {
     private var _binding : FragmentKcalBinding ? = null
     private val binding get() = _binding!!
-
     private val chatAdapter = ChatAdapter()
 
     // tạo repo
@@ -54,7 +53,6 @@ class KcalFragment : Fragment() {
             viewModel.onSearchClicked(rawText)
         }
 
-        // Call API
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.items.collect {
                 items -> chatAdapter.submitList(items)

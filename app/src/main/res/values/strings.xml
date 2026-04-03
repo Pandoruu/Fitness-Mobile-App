@@ -7,4 +7,6 @@
     <string name="add_a_new_plan">Add a new Plan</string>
     <string name="kcal_counter">Kcal Counter</string>
     <string name="kcal">Kcal</string>
+    <string name="kcal_food_hint">ex: rice</string>
+    <string name="search">Search</string>
 </resources>

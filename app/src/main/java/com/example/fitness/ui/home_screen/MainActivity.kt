@@ -5,6 +5,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import com.example.fitness.R
 import com.example.fitness.databinding.ActivityMainBinding
 
@@ -19,10 +21,22 @@ class MainActivity : AppCompatActivity() {
 
         enableEdgeToEdge()
         setContentView(binding.root)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+        ViewCompat.setOnApplyWindowInsetsListener(binding.fragmentContainer) { v, insets ->
+            val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(0, bars.top, 0, 0)
             insets
         }
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.bottomNav) { v, insets ->
+            val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(0, 0, 0, bars.bottom)
+            insets
+        }
+
+
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(binding.fragmentContainer.id) as NavHostFragment
+        val navController = navHostFragment.navController
+        binding.bottomNav.setupWithNavController(navController)
     }
 }

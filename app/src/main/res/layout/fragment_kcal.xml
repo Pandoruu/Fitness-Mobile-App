@@ -30,7 +30,9 @@
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:hint="ex: rice 150g"
+            android:hint="ex: chicken breast"
+            android:imeOptions="actionSearch"
+            android:inputType="text|textCapWords"
             android:paddingHorizontal="16dp" />
 
         <Button

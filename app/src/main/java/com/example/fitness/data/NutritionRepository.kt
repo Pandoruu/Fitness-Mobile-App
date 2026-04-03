@@ -104,11 +104,8 @@ class NutritionRepository(
     }
 
     private fun buildPrompt(foodDescription: String, grams: Double, kcalTotal: Double): String {
-        return "Bạn là trợ lý dinh dưỡng. Trả lời NGẮN và KHÔNG giải thích dài. Chỉ trả về JSON hợp lệ, không thêm chữ ngoài JSON. " +
+        return "Trả lời NGẮN và KHÔNG giải thích dài dòng, bỏ qua các câu nối từ và trả lời theo đúng mẫu." +
                 "Input: food=$foodDescription; grams=$grams; kcal=$kcalTotal. " +
-                "Yêu cầu: meal_time chỉ là một trong [breakfast,lunch,dinner,snack]; portion_action chỉ là một trong [keep,increase,decrease]; " +
-                "suggested_grams là số nguyên làm tròn đến 5g gần nhất; reason tối đa 16 từ; notes tối đa 2 ý mỗi ý tối đa 12 từ. " +
-                "Trả về đúng 5 key theo thứ tự: meal_time, reason, portion_action, suggested_grams, notes. " +
-                "KHÔNG dùng markdown, KHÔNG dùng dấu ```, chỉ in ra JSON thuần 1 lần."
+                "Yêu cầu trả lời: Món [Tên món ăn] chứa nhiều [dưỡng chất mà món đó cung cấp]; Nên ăn vào các bữa: [sáng, trưa, tối, ăn nhẹ]; Lượng thức ăn khuyên dùng mỗi bữa: [số nguyên làm tròn đến 5g gần nhất] = Lượng kcal của phần thức ăn đó."
     }
 }

@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/kcalNav">
     <fragment
         android:id="@+id/exercisesNav"
         android:name="com.example.fitness.ui.home_screen.ExerciseFragment"
-        android:label="ExerciseFragment" >
-        <action
-            android:id="@+id/action_exerciseFragment_to_kcalFragment"
-            app:destination="@id/kcalNav" />
-    </fragment>
+        android:label="ExerciseFragment" />
     <fragment
         android:id="@+id/kcalNav"
         android:name="com.example.fitness.ui.kcal.KcalFragment"
         android:label="KcalFragment" />
+    <fragment
+        android:id="@+id/planNav"
+        android:name="com.example.fitness.ui.plans.PlansFragment"
+        android:label="PlansFragment" />
+    <fragment
+        android:id="@+id/moreNav"
+        android:name="com.example.fitness.ui.setting.MoreFragment"
+        android:label="MoreFragment" />
 </navigation>

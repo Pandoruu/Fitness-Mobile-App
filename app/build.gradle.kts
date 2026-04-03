@@ -73,6 +73,7 @@ dependencies {
 
     val roomVersion = "2.7.2"
 
+    //Room Database
     implementation("androidx.room:room-runtime:$roomVersion")
     kapt("androidx.room:room-compiler:$roomVersion")
 
